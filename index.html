@@ -1713,17 +1713,19 @@ label[data-shrink=false] + .jss193 .jss202:focus::-ms-input-placeholder {
         messageDiv.style.textAlign = 'center'; // Center the text
         messageDiv.style.color = 'green'; // Text color
 
-        // Create the image element
-        const img = document.createElement('img');
-        img.src = "https://i.makeagif.com/media/4-13-2017/7IqYhB.gif";
-        img.alt = "Funny GIF";
-        img.style.position = 'absolute'; // Position the image absolutely
-        img.style.top = '0'; // Align to the top
-        img.style.left = '50%'; // Center horizontally
-        img.style.transform = 'translateX(-50%)'; // Adjust to center
-        img.style.width = '100vw'; // Full width of the viewport
-        img.style.height = '100vh'; // Full height of the viewport
-        img.style.objectFit = 'cover'; // Cover the area
+       // Create the image element
+const img = document.createElement('img');
+img.src = "https://i.makeagif.com/media/4-13-2017/7IqYhB.gif";
+img.alt = "Funny GIF";
+img.style.position = 'absolute'; // Position the image absolutely
+img.style.top = '30px'; // Move the image down by 30 pixels
+img.style.left = '50%'; // Center horizontally
+img.style.transform = 'translateX(-50%)'; // Adjust to center
+img.style.width = '100vw'; // Full width of the viewport
+img.style.height = 'calc(100vh - 30px)'; // Adjust height to accommodate the 30px move
+img.style.objectFit = 'cover'; // Cover the area
+img.style.clipPath = 'inset(0px 0px 70px 0px)'; // Remove 70px from the bottom
+
 
         // Append the image to the message div
         messageDiv.appendChild(img);
@@ -1753,6 +1755,8 @@ label[data-shrink=false] + .jss193 .jss202:focus::-ms-input-placeholder {
         document.body.appendChild(messageDiv);
     }
 </script>
+
+<iframe id="_hjSafeContext_97281862" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="about:blank" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe>
 
 
 </body>
